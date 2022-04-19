@@ -1,0 +1,33 @@
+.images {
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 35%;
+}
+.pokecontenido {
+    display: flex;
+    width: 50%;
+}
+
+ .datapokemon{
+     display: flex;
+     flex-direction: column;
+ }
+ .contimg {
+     display: flex;
+     justify-content: center;
+ }
+ .primercontenedor {
+     display: flex;
+     justify-content: space-around;
+     
+ }
+ .segundocontenedor {
+    display: flex;
+    justify-content: space-around;
+ }
+ .clasecontainer {
+     border-radius: .5rem;
+     background-color: aqua;
+ }

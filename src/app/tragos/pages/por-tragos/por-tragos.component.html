@@ -1,0 +1,56 @@
+<h1>Buscar por el nombre del Trago</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="buscar()" autocomplete="off">
+            <input type="text"
+                    name="termino"
+                    class="form-control"
+                    [(ngModel)]="termino"
+                    placeholder="Buscar Trago...">
+        </form>
+    </div>
+</div>
+
+<hr>
+
+<div *ngIf="hayError"
+     class="alert alert-danger">
+    No se encontró nada con el término {{termino}}
+</div>
+
+<div class="row">
+    <div class="col">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Foto</th>
+                    <th>Trago</th>
+                    <th>Ingredientes</th>
+                    <!-- <th>Cantidades</th> -->
+                    <th>Categoría</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let trago of tragos; let i = index">
+                    <td>{{i+1}}</td>
+                    <td class="imagen"><img src="{{trago.strDrinkThumb}}" alt=""></td>
+                    <td class="titulotrago">{{ trago.strDrink }}</td>
+                    <td class="ingredientes">{{ obtenerIngredientes(trago)}}</td>
+                    <!-- <td>Cantidades</td> -->
+                    <td> {{trago.strCategory}} </td>
+                    <td>
+                        <!-- <a href="/app-agusher/src/app/tragos/pages/ver-trago/ver-trago.component.html">Ver Trago...</a> -->
+                        <a href="/ver-trago/{{trago.idDrink}}">Ver Trago...</a>
+                    </td>
+
+                </tr> 
+            </tbody>
+        </table>
+
+    </div>
+</div>

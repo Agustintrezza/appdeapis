@@ -1,0 +1,69 @@
+<div class="title contenedorimg">
+    <h1 class="title">Chistes o Frases de Chuck Norris</h1>
+    <img class="imagenchuck" src="../../../../assets/Chuck.png" alt="Foto Chuck">
+</div>
+
+
+<hr>
+<h2>Buscar por Categorías</h2>
+<select (change)="buscarPorCategoriaEvent($event)" *ngIf="categorias" class="form-select" aria-label="Default select example">
+  <option *ngFor="let categoria of categorias" value="{{categoria}}">{{categoria}}</option>
+</select>
+
+<br>
+
+<div *ngIf="chiste.id" class="card mb-2">
+  <div class="card-header">
+      {{chiste.categories[0]}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Frase de Chuky</h5>
+    <p class="card-text">{{chiste.value}}</p>
+    <!-- <a href="#" class="btn btn-primary">VOLVER</a> -->
+  </div>
+</div>
+
+<br>
+<hr>
+
+<h2>Buscar por un término de búsqueda</h2>
+
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="buscarChuck()" autocomplete="off">
+            <input type="text"
+                    name="termino"
+                    class="form-control mb-3"
+                    [(ngModel)]="termino"
+                    placeholder="Ingresar un término para filtrar tu frase de Chuck...">
+        </form>
+    </div>
+</div>
+
+
+
+<!-- <div *ngFor="let chu of chuk; let i = index" class="card" style="width: 18rem;">
+    <img src="{{chu.icon_url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{i+1}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+
+ 
+
+  <div *ngFor="let chu of chuk; let i = index" class="card mb-2">
+    <div class="card-header">
+        {{i+1}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Frase de Chuky</h5>
+      <p class="card-text">{{chu.value}}</p>
+      <!-- <a href="#" class="btn btn-primary">VOLVER</a> -->
+    </div>
+  </div>
+
+
+
+  

@@ -1,0 +1,34 @@
+<div *ngIf="trago.idDrink" class="card general" style="width: 18rem;">
+    <img src="{{trago.strDrinkThumb}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h2 class="card-title titulo">{{trago.strDrink}}</h2>
+      <div class="ingredients">
+          <div class="contenedoringredientes">
+            <ul>
+                <li>
+                  <a class="ingrediente" href="/por-ingrediente/{{trago.strIngredient1}}">{{trago.strIngredient1}}</a>
+                </li>
+                <li>
+                  <a class="ingrediente" href="/por-ingrediente/{{trago.strIngredient2}}">{{trago.strIngredient2}}</a>
+                </li>
+                <li>
+                  <a class="ingrediente" href="/por-ingrediente/{{trago.strIngredient3}}">{{trago.strIngredient3}}</a>
+                </li>
+                <li>
+                  <a class="ingrediente" href="/por-ingrediente/{{trago.strIngredient4}}">{{trago.strIngredient4}}</a>
+                </li>
+            </ul>
+
+          </div>  
+        </div>
+
+        <!-- <div>
+            <ul>
+              <li>{{trago.strIngredient3}}</li>
+              <li>{{trago.strIngredient4}}</li>
+            </ul>
+        </div> -->
+      <p class="card-text text">{{trago.strInstructions}}</p>
+      <a href="/" class="btn btn-primary">VOLVER</a>
+    </div>
+  </div>

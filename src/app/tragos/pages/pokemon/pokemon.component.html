@@ -1,0 +1,122 @@
+<!-- 
+<div *ngFor="let poke of pokemon" class="card container clasecontainer" style="width: 18rem;">
+    <h2 class="card-title text-center">{{poke.name | titlecase}}</h2>
+    <div class="contimg">
+        <img [src]="poke.sprites.other.home.front_default" class="card-img-top" alt="...">
+    </div>
+    <div class="card-body">
+      
+      <div class="datapokemon mb-3">
+          <div class="primercontenedor">
+              <p>
+                <b>Tipo:</b> {{poke.types[0].type.name | titlecase}}
+              </p>
+              <p>
+                <b>Altura:</b> {{poke.height}}
+              </p>
+          </div>
+          <div class="segundocontenedor">
+              <p>
+                <b>Salud:</b> {{poke.stats[0].base_stat}}
+              </p>
+              <p>
+                <b>Habilidad:</b> {{poke.base_experience}}
+              </p>
+          </div>
+      </div>
+
+      <p *ngFor="let description of descriptions" class="text-center">
+        <b>Identificaror POKEAPI: </b> {{description.id}}
+    </p>
+
+    <p *ngFor="let description of descriptions" class="text-center">
+        <b>Algo de él:</b> {{description.descriptions[5].description}}
+    </p>
+      
+      <a href="#" class="btn btn-primary">VOLVER</a>
+    </div>
+  </div> -->
+
+
+
+
+
+
+
+
+<div *ngFor="let poke of pokemon" class="container-fluid">
+    <h1 class="text-center mb-0">{{poke.name | titlecase}}</h1>
+
+    <div class="images">
+        <img [src]="poke.sprites.other.home.front_default" class="card-img-top mb-5" alt="...">
+        <!-- <!-- <img [src]="poke.sprites.front_shiny" class="card-img-top" alt="..."> -->
+    </div>
+
+    <div class="flexbox-container">
+
+        <div class="primercontenedor mb-3">
+            <p class="">
+                <b>Tipo:</b> {{poke.types[0].type.name | titlecase}}
+            </p>
+            <p>
+                <b>Altura:</b> {{poke.height}}
+            </p>
+            <p>
+                <b>Salud:</b> {{poke.stats[0].base_stat}}
+            </p> 
+            <p>
+                <b>Poder de Ataque:</b> {{poke.stats[1].base_stat}}
+            </p> 
+            <p>
+                <b>Habilidad:</b> {{poke.base_experience}}
+            </p> 
+        </div>
+
+        <div class="segundocontenedor">
+            <p *ngFor="let description of descriptions">
+                <b>Algo de él:</b> {{description.descriptions[5].description}}
+            </p>
+            <p *ngFor="let description of descriptions">
+                <b>Identificaror POKEAPI: </b> {{description.id}}
+            </p>
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+    <a href="/ver-pokemon/" class="btn btn-primary">VOLVER</a>
+
+    <hr>
+
+    
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div *ngFor="let poke of pokemon">
+    <h1 class="text-center">{{poke.name | titlecase}}</h1>
+    <div class="images">
+        <img [src]="poke.sprites.other.home.front_default" class="card-img-top" alt="...">
+    </div>
+
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> --> 
+

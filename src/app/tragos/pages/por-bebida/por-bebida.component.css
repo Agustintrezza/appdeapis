@@ -1,0 +1,12 @@
+.imagenchuck {
+    width: 7%;
+    border-radius: 5px;
+}
+.contenedorimg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    margin-bottom: 0px !important;
+}
