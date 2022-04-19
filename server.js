@@ -15,3 +15,6 @@ console.log('El servidor esta corriendo!!')
 
 // comment // "heroku-postbuild": "ng-build --prod", "build": "ng build", "postinstall": "ng build --aot --target=production"
 //    "watch": "ng build --watch --configuration development",
+
+
+// https://www.youtube.com/watch?v=0bOJjAUXjhI&ab_channel=WesDoyle    video del cual pude hacer el deploy a heroku
