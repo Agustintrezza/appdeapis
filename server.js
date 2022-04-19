@@ -12,4 +12,5 @@ app.listen(process.env.PORT || 8080);
 
 console.log('El servidor está corriendo!');
 
-// comment
+// comment // "heroku-postbuild": "ng-build --prod", "build": "ng build", "postinstall": "ng build --aot --target=production"
+//    "watch": "ng build --watch --configuration development",
